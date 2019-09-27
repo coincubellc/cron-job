@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  shell:
+    build: .
+    environment:
+      PYTHONUNBUFFERED: 1
+      SQLALCHEMY_DATABASE_URI: mysql://admin:G90ok0lSTz8i@db.prod.coincube.io/coincube
+      EXAPI_URL: https://exapi.prod.coincube.io
+      EMAIL_URL: https://email.prod.coincube.io
+      VAULT_URL: https://vault.prod.coincube.io:8200
+      PRICE_CACHER_URL: https://price-cacher.prod.coincube.io
+      CMC_API_KEY: '932e9896-d43d-4f5e-87e1-ac4d47ba8df6'
+      CMC_LIMIT: 500
+    tty: true
+    entrypoint: "/bin/bash"

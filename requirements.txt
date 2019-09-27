@@ -1,0 +1,16 @@
+numexpr==2.6.1
+pycrypto==2.6.1
+requests==2.21.0
+SQLAlchemy==1.0.11
+wheel==0.24.0
+onetimepass==0.2.2
+redis
+lxml==4.2.1
+bs4==0.0.1
+kombu==4.5.0
+celery
+flask-script
+flask-migrate
+hvac
+mysqlclient
+flask-bcrypt
