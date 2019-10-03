@@ -12,5 +12,5 @@ celery
 flask-script
 flask-migrate
 hvac
-mysqlclient
+pymysql
 flask-bcrypt
