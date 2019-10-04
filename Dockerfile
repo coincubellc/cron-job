@@ -1,9 +1,9 @@
-FROM continuumio/anaconda3:2019.03
+FROM continuumio/miniconda3
 RUN apt-get update && apt-get install -y build-essential redis-tools default-libmysqlclient-dev
 
 # Python packages
 RUN conda install -c conda-forge passlib flask-login flask-wtf flask-mail flask-user celery
-RUN pip install mysqlclient
+RUN pip install mysqlclient numpy
 COPY requirements.txt /cron-job/requirements.txt
 RUN pip install -r /cron-job/requirements.txt
 
