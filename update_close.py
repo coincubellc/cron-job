@@ -65,7 +65,8 @@ def update_index_pair_close():
         # Average of exchanges for close
         total_close = 0
         for ex_pair in ex_pairs:
-            total_close += ex_pair.get_close()
+            ex_pair_close = ExPairClose.query.filter_by(ex_pair_id=ex_pair.id).first()
+            total_close += ex_pair_close[0].close
 
         total_close /= len(ex_pairs)
 
